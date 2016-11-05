@@ -5,6 +5,8 @@
       "type": "platform"
     },
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
+   // "Microsoft.AspNetCore.Mvc": "1.0.0",
+  
     "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
     "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
     "Microsoft.Extensions.Logging.Console": "1.0.0",
@@ -12,6 +14,12 @@
     "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
     "Microsoft.Extensions.Configuration.Json": "1.0.0",
     "Microsoft.Extensions.Configuration.CommandLine": "1.0.0"
+     "Microsoft.EntityFrameWorkCore.": "1.0.0",
+    "Microsoft.EntityFrameWorkCore.Sqlite": "1.0.0",
+    "Microsoft.EntityFrameWorkCore.Design":{
+      "version": "1.0.0-preview2-final",
+      "type": "build"
+    }
   },
 
   "tools": {
