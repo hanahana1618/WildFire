@@ -9,8 +9,8 @@ CREATE TABLE Account IF NOT EXISTS (
     username    TEXT UNIQUE,
     password  //hash and salt
     email TEXT UNIQUE,
-    project_id INTEGER
-
+    project_id INTEGER,
+    picture TEXT
 );
 
 
