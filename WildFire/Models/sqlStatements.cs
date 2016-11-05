@@ -2,17 +2,15 @@
 
 //basic queries that need to be updated for CS language
 /*cur.executescript('''
-DROP TABLE IF EXISTS Artist;
-DROP TABLE IF EXISTS Album;
-DROP TABLE IF EXISTS Track;
 
-CREATE TABLE Artist (
+
+CREATE TABLE Account IF NOT EXISTS (
     id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     name    TEXT UNIQUE
 );
 
 
-CREATE TABLE Album (
+CREATE TABLE Project IF NOT EXISTS (
     id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     artist_id  INTEGER,
     title   TEXT UNIQUE
