@@ -1,0 +1,2 @@
+C:\Users\Administrator\Source\Repos\hw3\SampleDatabaseWalkthrough\SampleDatabaseWalkthrough\bin\Debug\SampleDatabaseWalkthrough.exe.config
+C:\Users\Administrator\Source\Repos\WildFire\SampleDatabaseWalkthrough\bin\Debug\SampleDatabaseWalkthrough.exe.config
