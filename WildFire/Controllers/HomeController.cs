@@ -10,7 +10,7 @@ namespace WildFire.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(Models.Character.GetAll());
         }
 
         public IActionResult About()
@@ -30,6 +30,13 @@ namespace WildFire.Controllers
         public IActionResult Error()
         {
             return View();
+        }
+
+        public IActionResult Create(string CharacterName) {
+            Models.Character.Create(CharacterName);
+            //var model = new WildFire.Models.Character();
+            //model.Name = CharacterName;
+            return RedirectToAction("Index");
         }
     }
 }
