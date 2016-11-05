@@ -6,21 +6,25 @@
 
 CREATE TABLE Account IF NOT EXISTS (
     id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    name    TEXT UNIQUE
+    username    TEXT UNIQUE,
+    password  //hash and salt
+    email TEXT UNIQUE,
+    project_id INTEGER
+
 );
 
 
 CREATE TABLE Project IF NOT EXISTS (
     id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    artist_id  INTEGER,
-    title   TEXT UNIQUE
+    account_id  INTEGER,
+    title   TEXT UNIQUE,
+    description TEXT,
+    subject TEXT,
+    funding INTEGER,
+    deadline DATE,
+    picture TEXT,
+    skillsRequired TEXT,
+    %funding INTEGER
 );
 
-CREATE TABLE Track (
-    id  INTEGER NOT NULL PRIMARY KEY
-        AUTOINCREMENT UNIQUE,
-    title TEXT  UNIQUE,
-    album_id  INTEGER,
-    len INTEGER, rating INTEGER, count INTEGER
-);
 ''') */
