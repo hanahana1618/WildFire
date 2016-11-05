@@ -24,7 +24,7 @@ CREATE TABLE Project IF NOT EXISTS (
     deadline DATE,
     picture TEXT,
     skillsRequired TEXT,
-    %funding INTEGER
+    percFunding INTEGER
 );
 
 ''') */
