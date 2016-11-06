@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using ForgingAhead.Data;
 using ForgingAhead.Models;
 using ForgingAhead.Services;
@@ -47,11 +48,15 @@ namespace ForgingAhead
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddEntityFramework()
+                .AddDbContext<Models.ApplicationDbContext>();
+
             services.AddMvc();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
