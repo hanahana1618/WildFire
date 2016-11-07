@@ -1,16 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Login";
 }
-<h2>@ViewData["Title"].</h2>
-@*<h3>@ViewData["Message"]</h3>*@
+<div align="center">
+    <h2>@ViewData["Title"].</h2>
+    @*<h3>@ViewData["Message"]</h3>*@
 
-@*<p>Use this area to provide additional information.</p>*@
+    @*<p>Use this area to provide additional information.</p>*@
 
-<form asp-action="Login" asp-controller="Home">
-    <div>
-        <p><input type="text" name="Login" value="" placeholder="Username"/></p>
-        <p><input type="password" naem="Password" value="" placeholder="Password" /></p>
-        <p><input type="submit" value="Login" /></p>or<p></p><p><input type="submit" value="Register" /></p>
-    </div>
-    
-</form>
+    <form asp-action="Login" asp-controller="Home">
+        <div>
+            <p><input type="text" name="Login" value="" placeholder="Username" /></p>
+            <p><input type="password" naem="Password" value="" placeholder="Password" /></p>
+            <p><input type="submit" value="Login" /></p>or<p></p><p><input type="submit" value="Register" /></p>
+        </div>
+
+    </form>
+</div>
