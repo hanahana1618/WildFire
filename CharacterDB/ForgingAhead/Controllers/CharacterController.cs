@@ -18,5 +18,15 @@ namespace ForgingAhead.Controllers {
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult Index() {
+            var model = _context.Characters.ToList();
+            return View(model);
+        }
+
+        pubic IActionResult GetActive() {
+            var model = _context.Characters.Where(e => e.IsActive).ToList();
+            return View(model);
+        }
     }
 }
