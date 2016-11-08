@@ -45,10 +45,11 @@ namespace Wildfire.Controllers
             return View(/*view page with project info*/"Idea_form");
         }
 
-        public IActionResult IdeaFinanceView(Idea model)
+        public IActionResult IdeaFinanceView(Idea model, int Goal)
         {
             ViewData["Message"] = "Create a Project: Finance";
             //statement to add project informaton to database
+            model.Goal = Goal;
 
             return View(/*view page with project info*/"Idea_view", model);
         }

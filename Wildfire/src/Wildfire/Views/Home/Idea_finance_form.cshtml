@@ -4,11 +4,11 @@
 }
 <h2>@ViewData["Message"]</h2>
 
-<form asp-action="Comp">
+<form asp-action="IdeaFinanceView">
  @if (Model.Finance == 1)
  {
     <p>How much money do you need to complete the project.</p>
-    <p>Financial Goal: <input type="text" name="Goal" size="6" placeholder="$0.00" /></p><br /><br />
+    <p>Financial Goal: <input type="number" name="Goal" size="6" placeholder="$0.00" /></p><br /><br />
  }
  @if (Model.Skills == 1)
  { 

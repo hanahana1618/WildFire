@@ -16,6 +16,7 @@ namespace Wildfire.Models
         public int Finance;
         public int Skills;
         public int Petition;
+        public int Goal;
         //progress
         
     }
