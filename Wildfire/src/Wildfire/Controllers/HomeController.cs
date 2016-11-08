@@ -52,8 +52,8 @@ namespace Wildfire.Controllers
             model.Title = Title;
             model.Description = Description;
             //progress bar
-
-            return View("Idea_view", model);
+            var model2 = new Wildfire.Models.Idea();
+            return View("Idea_view", model, model2);
         }
 
         public IActionResult Error()
