@@ -14,6 +14,7 @@ namespace ForgingAhead.Controllers {
         }
 
         public IActionResult Create(Character character) {
+            if (!ModelState.IsValid) return View(character);
             _context.Characters.Add(character);
             _context.SaveChanges();
             return RedirectToAction("Index");
@@ -48,6 +49,13 @@ namespace ForgingAhead.Controllers {
                 _context.SaveChanges();
             }
             return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(string name) {
+            ViewData["Title"] = "Edit " + name;
+
+            var model = 
+            return View(model);
         }
     }
 }
