@@ -7,11 +7,12 @@
 <form asp-action="Comp">
  @if (Model.Finance == 1)
  {
-    <p>This is the part where you set how much money do you need to complete the project.</p>
-    <p>Financial Goal: <input type="text" name="Goal" size="6" placeholder="$0.00" /></p>
+    <p>How much money do you need to complete the project.</p>
+    <p>Financial Goal: <input type="text" name="Goal" size="6" placeholder="$0.00" /></p><br /><br />
  }
  @if (Model.Skills == 1)
  { 
+     <p>What skills are required to complete the project.</p>
      <p>Skills:
      <input type="text" name="skill" placeholder="position" /> Category:
     <select name="Skill_cat" size="1">
@@ -24,12 +25,16 @@
         <option value="Design">Design</option>
         <option value="Gaming">Gaming</option>
         <option value="Fitness">Fitness</option>
-        <option value="SkillCat">Skill Category</option>
-    </select><p></p></p>
+        <option value="SkillCat">Skill Category1</option>
+        <option value="SkillCat">Skill Category2</option>
+        <option value="SkillCat">Skill Category3</option>
+    </select> <input type="button" value="Add"/><p></p></p><br /><br />
  }
  @if (Model.Petition == 1)
  {
-     <p>Petition</p>
+    <p></p>
+     <p>Petition:</p>
+     <p>How many signatures do you need? <input type="text" name="num_signatures" size="5"/></p>
  }
 
 
