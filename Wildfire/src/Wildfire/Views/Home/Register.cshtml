@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+<h2>@ViewData["Title"].</h2>
+@*<h3>@ViewData["Message"]</h3>*@
+
+@*<p>Use this area to provide additional information.</p>*@
+
+<form asp-action="Register" asp-controller="Home">
+    <div>
+        <p><input type="text" name="FirstName" value="" placeholder="FirstName" /></p>
+        <p><input type="text" name="LastName" value="" placeholder="LastName" /></p>
+        <p><input type="text" name="Password" value="" placeholder="Password"/></p>
+        <p><input type="password" naem="Confirmation" value="" placeholder="Confirmation" /></p>
+        <p><input type="submit" value="Register" /></p>
+    </div>
+    
+</form>

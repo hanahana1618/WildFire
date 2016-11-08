@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Idea";
+}
+<h2>@ViewData["Message"]</h2>
+
+<form asp-action="IdeaView">
+    <p>1. Choose a category:</p>
+    <select name="Category" size="1" >
+        <option value="IDEA CENTER">IDEA CENTER</option>
+        <option value="FIU">FIU</option>
+        <option value="NORTH">NORTH</option>
+    </select><p></p>
+    <p>2. Give your project a title:</p>
+    <input type="text" name="Title" size="12" placeholder="Title"/><p></p>
+    <p>3. Description:</p>
+    <textarea name="Description" rows="4" cols="200"></textarea><p></p>
+    @*PROGRESS BAR*@
+    @*<input type="text" name="Description" style="height: 80px" width="300" size="20000"/>*@
+    <input type="submit" value="SUBMIT" />
+
+
+
+   
+</form>
