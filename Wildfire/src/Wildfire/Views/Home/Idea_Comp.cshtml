@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Idea";
+}
+<h2>@ViewData["Message"]</h2>
+<h2>Create a Project: Step 2 Components</h2>
+
+<form asp-action="Components">
+    <p>Select components that you want your project to have:</p>
+    <p><input type="checkbox" value="1" name="Finance" />Finance</p>
+   
+    <p><input type="checkbox" value="1" name="Skills" />Skills</p>
+    
+    <p><input type="checkbox" value="1" name="Petition" />Petition</p>
+    @*<p>This is the part where you set how much money do you need to complete the project.</p>
+    <p>Financial Goal: <input type="text" name="Goal" size="6" placeholder="$0.00"/></p>*@
+
+    
+   
+    @*PROGRESS BAR*@
+    @*<input type="text" name="Description" style="height: 80px" width="300" size="20000"/>*@
+    <input type="submit" value="NEXT" />
+
+
+
+   
+</form>

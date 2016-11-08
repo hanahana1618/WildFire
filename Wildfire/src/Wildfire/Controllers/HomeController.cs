@@ -47,12 +47,18 @@ namespace Wildfire.Controllers
 
         public IActionResult IdeaFinanceView(Idea model)
         {
-            ViewData["Message"] = "Create a Project: Step 2 Finance";
+            ViewData["Message"] = "Create a Project: Finance";
             //statement to add project informaton to database
 
             return View(/*view page with project info*/"Idea_view", model);
         }
 
+        public IActionResult Comp(Idea model, int Skills=0, int Finance=0, int Petition=0)
+        {
+            ViewData["Message"] = "Create a Project: Components";
+
+            return View("Idea_finance_form", model);
+        }
         public IActionResult IdeaView(string Category, string Title, string Description)
         {
             var model = new Wildfire.Models.Idea();
@@ -61,7 +67,7 @@ namespace Wildfire.Controllers
             model.Description = Description;
             //progress bar
             var model2 = new Wildfire.Models.Idea();
-            return View("Idea_finance_form", model);
+            return View("Idea_Comp", model);
         }
 
         public IActionResult Error()
