@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Idea";
+}
+<h2>@ViewData["Message"]</h2>
+<h2>Create a Project: Step 2 Finance</h2>
+
+<form asp-action="IdeaFinanceView">
+ 
+    <p>This is the part where you set how much money do you need to complete the project.</p>
+    <p>Financial Goal: <input type="text" name="Goal" size="6" placeholder="$0.00"/></p>
+
+    <p>Skills Needed: </p>
+   
+    @*PROGRESS BAR*@
+    @*<input type="text" name="Description" style="height: 80px" width="300" size="20000"/>*@
+    <input type="submit" value="NEXT" />
+
+
+
+   
+</form>

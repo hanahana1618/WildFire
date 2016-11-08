@@ -4,28 +4,28 @@
 <h2>@ViewData["Message"]</h2>
 
 <form asp-action="IdeaView">
-    <p>1. Choose a Location:</p>
+    <p>Choose a Location:</p>
     <select name="Location" size="1" >
         <option value="IDEA_CENTER">IDEA CENTER</option>
         <option value="MDC-WOLFSON">MDC-WOLFSON</option>
         <option value="GREATER_MIAMI">GREATER MIAMI</option>
     </select><p></p>
-    <p>2. Choose a Project:</p>
+    <p>Choose a Project:</p>
     <select name="Project" size="1">
         <option value="templateA">Template Project A</option>
         <option value="templateB">Template Project B</option>
         <option value="templateC">Template Project C</option>
         <option value="customTemplate">Custom Project</option>
     </select><p></p>
-    <p>3. Give your project a title:</p>
+    <p>Give your project a title:</p>
     <input type="text" name="Title" size="12" placeholder="Title"/><p></p>
-    <p>4. Description:</p>
+    <p>Description:</p>
     <textarea name="Description" rows="4" cols="200"></textarea><p></p>
-    <p>5. Goal: <input type="text" name="Goal" size="6" placeholder="$0.00"/></p>
+    @*<p>5. Goal: <input type="text" name="Goal" size="6" placeholder="$0.00"/></p>*@
    
     @*PROGRESS BAR*@
     @*<input type="text" name="Description" style="height: 80px" width="300" size="20000"/>*@
-    <input type="submit" value="SUBMIT" />
+    <input type="submit" value="NEXT" />
 
 
 
