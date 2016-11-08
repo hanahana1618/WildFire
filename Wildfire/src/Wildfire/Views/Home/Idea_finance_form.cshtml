@@ -1,16 +1,39 @@
-﻿@{
+﻿@model Wildfire.Models.Idea
+@{
     ViewData["Title"] = "Idea";
 }
 <h2>@ViewData["Message"]</h2>
-<h2>Create a Project: Step 2 Finance</h2>
 
-<form asp-action="IdeaFinanceView">
- 
+<form asp-action="Comp">
+ @if (Model.Finance == 1)
+ {
     <p>This is the part where you set how much money do you need to complete the project.</p>
-    <p>Financial Goal: <input type="text" name="Goal" size="6" placeholder="$0.00"/></p>
+    <p>Financial Goal: <input type="text" name="Goal" size="6" placeholder="$0.00" /></p>
+ }
+ @if (Model.Skills == 1)
+ { 
+     <p>Skills:
+     <input type="text" name="skill" placeholder="position" /> Category:
+    <select name="Skill_cat" size="1">
+        <option value="Coding">Coding</option>
+        <option value="Organizer">Organizer</option>
+        <option value="Education">Education</option>
+        <option value="Accounting">Accounting</option>
+        <option value="Culinary">Culinary</option>
+        <option value="Social">Social</option>
+        <option value="Design">Design</option>
+        <option value="Gaming">Gaming</option>
+        <option value="Fitness">Fitness</option>
+        <option value="SkillCat">Skill Category</option>
+    </select><p></p></p>
+ }
+ @if (Model.Petition == 1)
+ {
+     <p>Petition</p>
+ }
 
-    <p>Skills Needed: </p>
-   
+
+
     @*PROGRESS BAR*@
     @*<input type="text" name="Description" style="height: 80px" width="300" size="20000"/>*@
     <input type="submit" value="NEXT" />

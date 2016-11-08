@@ -13,6 +13,9 @@ namespace Wildfire.Models
         public string Category;
         public string Title;
         public string Description;
+        public int Finance;
+        public int Skills;
+        public int Petition;
         //progress
         
     }

@@ -57,7 +57,11 @@ namespace Wildfire.Controllers
         {
             ViewData["Message"] = "Create a Project: Components";
 
+            model.Finance = Finance;
+            model.Skills = Skills;
+            model.Petition = Petition;
             return View("Idea_finance_form", model);
+
         }
         public IActionResult IdeaView(string Category, string Title, string Description)
         {
