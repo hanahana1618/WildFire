@@ -10,6 +10,8 @@ namespace WebApplication.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Player> Players { get; set; }
+        public DbSet<Project> Projects { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

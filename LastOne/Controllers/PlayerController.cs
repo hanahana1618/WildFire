@@ -16,14 +16,15 @@ namespace WebApplication.Controllers {
         }
 
         public IActionResult Index() {
-            return View();
+            var model = _context.Players.ToList();
+            return View(model);
         }
 
         [HttpGetAttribute]
         public IActionResult Create(Player player) {
             //create account
             if (!ModelState.IsValid) return View(player); //backend validation
-            _context.Users.Add(player);
+            _context.Players.Add(player);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -32,7 +33,7 @@ namespace WebApplication.Controllers {
         public IActionResult Create(Project project) {
             //create project
             if (!ModelState.IsValid) return View(project); //backend validation
-            _context.Users.Add(project);
+            _context.Projects.Add(project);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
