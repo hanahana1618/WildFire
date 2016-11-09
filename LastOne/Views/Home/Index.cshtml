@@ -1,8 +1,23 @@
 @{
     ViewData["Title"] = "Home Page";
+    model List<WebApplication.Models.Project>
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+<h1>Welcome to WildFire!</h1>
+
+    <!--create new project button-->
+    <!--<a asp-action="Create" asp-controller="User">Create a new account</a>      -->
+ 
+@foreach (var project in Model) {
+    <div class="jumbotron">
+    <h1>@project.NameProject</h1>
+    <p>@project.Description</p>
+    <!--This button should lead to the full page of the project-->
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+}
+
+<!--<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -106,4 +121,4 @@
             <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
         </ul>
     </div>
-</div>
+</div>-->
