@@ -12,7 +12,7 @@ namespace ForgingAhead.Models {
 
         [RequiredAttribute]
         [RangeAttribute(1, 100)]
-        pubic int Intelligence { get; set; }
+        public int Intelligence { get; set; }
         public List<Equipment> Equipment { get; set; }
 
         public List<Character> Characters { get; set; }
