@@ -30,10 +30,17 @@ namespace PleaseWork
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
+            //Add framework services
             services.AddEntityFramework()
                 .AddDbContext<Models.ApplicationDbContext>();
 
-            // Add framework services.
+            services.AddDbContext<ApplicationDbContext>(options => 
+                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+
+            // services.AddIdentity<ApplicationUser, IdentityRole>()
+            //     .AddEntityFrameworkStores<ApplicationDbContext>()
+            //     .AddDefaultTokenProviders();
+
             services.AddMvc();
         }
 
@@ -51,6 +58,8 @@ namespace PleaseWork
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+
+                using (var ServiceScope )
             }
 
             app.UseStaticFiles();
