@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.MVC;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,11 +51,6 @@ namespace ForgingAhead.Controllers {
             return RedirectToAction("Index");
         }
 
-        public IActionResult Edit(string name) {
-            ViewData["Title"] = "Edit " + name;
 
-            var model = 
-            return View(model);
-        }
     }
 }
