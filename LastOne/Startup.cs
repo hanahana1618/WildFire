@@ -69,6 +69,15 @@ namespace WebApplication
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+
+                using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
+                    .CreateScope())
+                {
+                    serviceScope.ServiceProvider.GetService<ApplicationDbContext>()
+                            .Database.EnsureDeleted();
+                    serviceScope.ServiceProvider.GetService<ApplicationDbContext>()
+                            .Database.EnsureCreated();
+                }
             }
 
             app.UseStaticFiles();
@@ -81,7 +90,7 @@ namespace WebApplication
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Player}/{action=Index}/{id?}");
             });
         }
     }
