@@ -4,11 +4,26 @@ using System.ComponentModel.DataAnnotations;
 namespace Yeoman.Models {
     public class Project {
         [RequiredAttribute]
+        [KeyAttribute] //makes the field unique
         public string NameProject { get; set; }
 
-        
+        [RequiredAttribute]
+        public string Description { get; set; }
 
+        [RequiredAttribute]
+        public string Subject { get; set; }
 
-        public List<Project> Projects { get; set; }
+        public string PictureProject { get; set; }
+
+        public int Funding { get; set; }
+
+        public string Skills { get; set; }
+    
+        [RequiredAttribute]
+        public int PercentageAchieved { get; set; }
+
+        //creates a many-to-many relationship between both tables
+        public List<Account> Accounts { get; set; }
+
     }
 }

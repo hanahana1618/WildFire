@@ -16,6 +16,8 @@ namespace Yeoman.Models {
 
         public string Picture { get; set; }
 
+        //creates a many-to-many relationship between both tables
+        public List<Project> Projects { get; set; }
 
     }
 }
