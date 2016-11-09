@@ -4,8 +4,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Yeoman.Models {
     public class Account {
         [RequiredAttribute]
-        [KeyAttribute] //makes the field unique
-        public string NameAccount { get; set; }
+        public string FirstNameAccount { get; set; }
+
+        [RequiredAttribute]
+        public string LastNameAccount { get; set; }
 
         [RequiredAttribute]
         public string Password { get; set; }
