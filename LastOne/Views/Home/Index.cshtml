@@ -6,7 +6,7 @@
 <h1>Welcome to WildFire!</h1>
 
     <!--create new project button-->
-    <!--<a asp-action="Create" asp-controller="User">Create a new account</a>      -->
+    <a asp-action="Create" asp-controller="Player">Create a new project</a>      
  
 @foreach (var project in Model) {
     <div class="jumbotron">
@@ -16,6 +16,45 @@
     <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
     </div>
 }
+
+ <!--create new project button-->
+    <h1>Create a new project</h1>
+    <form asp-action="Create" asp-controller="Player">
+
+        <div class="input-group">
+            <h2>Project Name</h2>
+        <span class="input-group-addon" id="sizing-addon2"></span>
+        <input type="text" class="form-control" placeholder="NameProject" aria-describedby="sizing-addon2">
+        </div>
+
+
+<div class="input-group">
+    <h2>Description</h2>
+  <span class="input-group-addon" id="sizing-addon2"></span>
+  <input type="text" class="form-control" placeholder="Description" aria-describedby="sizing-addon2">
+</div>
+
+
+<div class="input-group">
+    <h2>Subject</h2>
+  <span class="input-group-addon" id="sizing-addon2"></span>
+  <input type="text" class="form-control" placeholder="Subject" aria-describedby="sizing-addon2">
+</div>
+
+
+<div class="input-group">
+    <h2>Funding</h2>
+  <span class="input-group-addon" id="sizing-addon2">$</span>
+  <input type="text" class="form-control" placeholder="Funding" aria-describedby="sizing-addon2">
+</div>
+
+
+<div class="input-group">
+    <h2>Skills</h2>
+  <span class="input-group-addon" id="sizing-addon2"></span>
+  <input type="text" class="form-control" placeholder="Skills" aria-describedby="sizing-addon2">
+</div>
+    </form>
 
 <!--<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
