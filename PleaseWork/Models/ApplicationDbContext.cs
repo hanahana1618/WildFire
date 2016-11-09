@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using PleseWork.Models;
 
 // namespace Yeoman.Data {
 //     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -27,5 +28,6 @@ using Microsoft.EntityFrameworkCore;
 namespace PleaseWork.Models {
     public class ApplicationDbContext : DbContext {
         public DbSet<Project> Projects { get; set; }
+        public DbSet<Account> Accounts { get; set; }
     }
 }
