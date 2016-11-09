@@ -1,27 +1,26 @@
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace PleaseWork.Models {
+namespace PleseWork.Models {
     public class Project {
         [RequiredAttribute]
         [KeyAttribute] //makes the field unique
-        public string NameProject { get; set; }
+        public virtual string NameProject { get; set; }
 
         [RequiredAttribute]
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
 
         [RequiredAttribute]
-        public string Subject { get; set; }
+        public virtual string Subject { get; set; }
 
-        public string PictureProject { get; set; }
+        public virtual string PictureProject { get; set; }
 
-        public int Funding { get; set; }
+        public virtual int Funding { get; set; }
 
-        public string Skills { get; set; }
+        public virtual string Skills { get; set; }
     
         [RequiredAttribute]
-        public int PercentageAchieved { get; set; }
+        public virtual int PercentageAchieved { get; set; }
 
-        public ICollection<Account> Accounts { get; set; }
+        public virtual Account Account { get; set; }
     }
 }
