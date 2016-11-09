@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using PleseWork.Models;
 
-namespace Yeoman.Models {
+namespace PleseWork.Models {
     public class Account {
         [RequiredAttribute]
         public string FirstNameAccount { get; set; }

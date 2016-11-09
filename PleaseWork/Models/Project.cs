@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Yeoman.Models {
+namespace PleaseWork.Models {
     public class Project {
         [RequiredAttribute]
         [KeyAttribute] //makes the field unique
