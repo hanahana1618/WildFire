@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication.Models {
-    public class User {
+    public class Player {
         [RequiredAttribute]
         public virtual string FirstNameAccount { get; set; }
 

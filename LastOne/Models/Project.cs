@@ -21,6 +21,6 @@ namespace WebApplication.Models {
         [RequiredAttribute]
         public virtual int PercentageAchieved { get; set; }
 
-        public virtual User User { get; set; }
+        public virtual Player Player { get; set; }
     }
 }

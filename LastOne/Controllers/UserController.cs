@@ -3,12 +3,15 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using WebApplication.Models;
+using Microsoft.AspNetCore;
+using WebApplication.Data;
 
 namespace WebApplication.Controllers {
-    public class UserController : Controller {
+    public class PlayerController : Controller {
         private readonly ApplicationDbContext _context;
 
-        public UserController(ApplicationDbContext context) {
+        public PlayerController(ApplicationDbContext context) {
             _context = context;
         }
 
@@ -17,10 +20,10 @@ namespace WebApplication.Controllers {
         }
 
         [HttpGetAttribute]
-        public IActionResult Create(User user) {
+        public IActionResult Create(Player player) {
             //create account
-            if (!ModelState.IsValid) return View(user); //backend validation
-            _context.Users.Add(user);
+            if (!ModelState.IsValid) return View(player); //backend validation
+            _context.Users.Add(player);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
