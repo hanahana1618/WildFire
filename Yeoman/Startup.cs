@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Yeoman.Data;
 using Yeoman.Models;
 using Yeoman.Services;
@@ -40,12 +41,15 @@ namespace Yeoman
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<Yeoman.Data.ApplicationDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddEntityFrameworkStores<Yeoman.Data.ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddEntityFramework()
+                .AddDbContext<Models.ApplicationDbContext>();
 
             services.AddMvc();
 

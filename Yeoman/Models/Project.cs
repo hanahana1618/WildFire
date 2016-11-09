@@ -21,9 +21,5 @@ namespace Yeoman.Models {
     
         [RequiredAttribute]
         public int PercentageAchieved { get; set; }
-
-        //creates a many-to-many relationship between both tables
-        public List<Account> Accounts { get; set; }
-
     }
 }
