@@ -6,8 +6,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Yeoman.Models;
 
-namespace Yeoman.Data
-{
+namespace Yeoman.Data {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -21,6 +20,14 @@ namespace Yeoman.Data
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
+            public DbSet<Project> Projects { get; set; }
         }
     }
 }
+
+
+// namespace Yeoman.Models {
+//     public class ApplicationDbContext : DbContext {
+//         public DbSet<Project> Projects { get; set; }
+//     }
+// }
