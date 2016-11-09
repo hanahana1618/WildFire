@@ -8,7 +8,7 @@
  @if (Model.Finance == 1)
  {
     <p>How much money do you need to complete the project.</p>
-    <p>Financial Goal: <input type="number" name="Goal" size="6" placeholder="$0.00" /></p><br /><br />
+    <p>Financial Goal: <input type="number" min="0" step="any" name="Goal" size="6" placeholder="$0.00" /></p><br /><br />
  }
  @if (Model.Skills == 1)
  { 
