@@ -22,7 +22,6 @@ namespace PleaseWork.Models {
         [RequiredAttribute]
         public int PercentageAchieved { get; set; }
 
-        public List<Account> Accounts { get; set; }
-
+        public ICollection<Account> Accounts { get; set; }
     }
 }

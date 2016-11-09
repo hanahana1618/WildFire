@@ -33,9 +33,6 @@ namespace PleaseWork
             services.AddEntityFramework()
                 .AddDbContext<Models.ApplicationDbContext>();
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-
             // Add framework services.
             services.AddMvc();
         }
