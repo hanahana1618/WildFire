@@ -1,0 +1,46 @@
+// Place your settings in this file to overwrite default and user settings.
+
+// {
+//   "iisSettings": {
+//     "windowsAuthentication": false,
+//     "anonymousAuthentication": true,
+//     "iisExpress": {
+//       "applicationUrl": "http://localhost:5000"
+//     }
+//   },
+//   "profiles": {
+//     "IIS Express": {
+//       "commandName": "IISExpress",
+//       "launchBrowser": true,
+//       "environmentVariables": {
+//         "ASPNETCORE_ENVIRONMENT": "Development"
+//       }
+//     },
+//     "web": {
+//       "commandName": "web",
+//       "environmentVariables": {
+//         "ASPNETCORE_ENVIRONMENT": "Staging"
+//       }
+//     }
+//   }
+// }
+
+{
+    "iisSettings": {
+        "profiles": {
+            "IIS Express": {
+            "commandName": "IISExpress",
+            "launchBrowser": true,
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+                }
+            },
+            "web": {
+                "commandName": "web",
+                "environmentVariables": {
+                    "ASPNETCORE_ENVIRONMENT": "Development"
+                }
+            }
+        }
+    }
+}

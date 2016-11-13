@@ -24,6 +24,8 @@ namespace WebApplication
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
+            // env. = "Development";
+
             if (env.IsDevelopment())
             {
                 // For more details on using the user secret store see https://go.microsoft.com/fwlink/?LinkID=532709
@@ -70,14 +72,17 @@ namespace WebApplication
             {
                 app.UseExceptionHandler("/Home/Error");
 
-                // using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
-                //     .CreateScope())
-                // {
-                //     serviceScope.ServiceProvider.GetService<ApplicationDbContext>()
-                //             .Database.EnsureDeleted();
-                //     serviceScope.ServiceProvider.GetService<ApplicationDbContext>()
-                //             .Database.EnsureCreated();
-                // }
+                //every time the app is open again, a new table is created
+                //the info created with this app is not durable
+                //this is so that we don't have to use migrations
+                using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
+                    .CreateScope())
+                {
+                    serviceScope.ServiceProvider.GetService<ApplicationDbContext>()
+                            .Database.EnsureDeleted();
+                    serviceScope.ServiceProvider.GetService<ApplicationDbContext>()
+                            .Database.EnsureCreated();
+                }
             }
 
             app.UseStaticFiles();

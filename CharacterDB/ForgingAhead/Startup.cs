@@ -29,6 +29,7 @@ namespace ForgingAhead
             {
                 // For more details on using the user secret store see https://go.microsoft.com/fwlink/?LinkID=532709
                 builder.AddUserSecrets();
+                System.Console.WriteLine("It is in fact in dev mode");
             }
 
             builder.AddEnvironmentVariables();
@@ -41,11 +42,11 @@ namespace ForgingAhead
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<Models.ApplicationDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddEntityFrameworkStores<Models.ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
             services.AddEntityFramework()
